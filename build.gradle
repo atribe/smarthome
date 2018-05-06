@@ -1,0 +1,33 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:2.0.1.RELEASE")
+    }
+}
+
+group 'com.tribe3k'
+version '0.1.0'
+
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile("org.springframework.boot:spring-boot-starter-web:2.0.1.RELEASE")
+    compileOnly "org.springframework.boot:spring-boot-configuration-processor"
+//    compile("org.springframework.boot:spring-boot-starter-actuator")
+
+    compile 'org.influxdb:influxdb-java:2.9'
+
+    compileOnly 'org.projectlombok:lombok:1.16.20'
+//    annotationProcessor "org.projectlombok:lombok:1.16.20"
+}

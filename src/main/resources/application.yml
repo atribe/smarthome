@@ -1,0 +1,7 @@
+server:
+  port: 8090
+influxdb:
+  url: http://10.13.13.10:8086
+  username: root
+  password: root
+  dbName: smarthome
